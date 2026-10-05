@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Shopping - Exercise 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">amazon<span>.in</span></div>
+        <div class="location">📍 Deliver to India</div>
+
+        <form class="search-bar" onsubmit="searchProducts(event)">
+            <input id="searchBox" type="text" placeholder="Search products, brands and more">
+            <button type="submit">🔍</button>
+        </form>
+
+        <div class="account">Hello, Sign in<br><b>Account & Lists</b></div>
+        <div class="orders">Returns<br><b>& Orders</b></div>
+        <div class="cart-icon">🛒 Cart <span id="cartCount">0</span></div>
+    </header>
+
+    <nav>
+        <span>☰ All</span>
+        <span>Today's Deals</span>
+        <span>Customer Service</span>
+        <span>Registry</span>
+        <span>Gift Cards</span>
+        <span>Sell</span>
+        <a href="/" style="margin-left:auto;color:#ff9900;text-decoration:none;font-weight:700;">Switch to React App ➔</a>
+    </nav>
+
+    <main>
+
+        <section class="hero">
+            <div class="hero-content">
+                <p class="hero-kicker">AMAZON SHOPPING</p>
+                <h1>Great deals. <span>Every day.</span></h1>
+                <p>Shop electronics, fashion, home essentials and more.</p>
+
+                <button onclick="scrollToProducts()">
+                    Shop today's deals
+                </button>
+            </div>
+
+            <div class="hero-cards">
+                <div>
+                    <b>Up to 60% off</b>
+                    <small>Electronics</small>
+                </div>
+
+                <div>
+                    <b>Prime Delivery</b>
+                    <small>Fast & reliable</small>
+                </div>
+
+                <div>
+                    <b>₹499 onwards</b>
+                    <small>Top picks</small>
+                </div>
+            </div>
+        </section>
+
+        <section class="quick-row">
+            <div>
+                <b>🚚 Fast Delivery</b>
+                <span>Across India</span>
+            </div>
+
+            <div>
+                <b>🔒 Secure Payments</b>
+                <span>100% protected</span>
+            </div>
+
+            <div>
+                <b>↩ Easy Returns</b>
+                <span>Hassle-free</span>
+            </div>
+
+            <div>
+                <b>⭐ Prime Benefits</b>
+                <span>Exclusive deals</span>
+            </div>
+        </section>
+
+        <section class="workspace" id="products">
+
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">TODAY'S PICKS</p>
+                    <h2>Popular Products</h2>
+                </div>
+
+                <span id="cartItems">0 item(s) in cart</span>
+            </div>
+
+            <div class="product-grid" id="productGrid">
+                <div class="status">Loading Amazon products...</div>
+            </div>
+
+            <div id="noProducts" class="status hidden" style="display:none;">
+                No products found. Try another search.
+            </div>
+
+        </section>
+
+        <section class="cart-panel">
+
+            <div>
+                <p class="eyebrow">YOUR SHOPPING CART</p>
+                <h2>Cart has <span id="cartTotal">0</span> item(s)</h2>
+                <p>Add products from the cards above and manage your cart here.</p>
+            </div>
+
+            <div class="cart-actions">
+                <button
+                    class="secondary-btn"
+                    id="removeBtn"
+                    onclick="removeFromCart()"
+                    disabled>
+                    Remove Item
+                </button>
+
+                <button
+                    class="buy-btn"
+                    id="buyBtn"
+                    onclick="buyNow()"
+                    disabled>
+                    Buy Now
+                </button>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <button onclick="backToTop()">Back to top</button>
+
+        <div class="footer-main">
+
+            <div>
+                <h3>Get to Know Us</h3>
+                <p>About Amazon</p>
+                <p>Careers</p>
+                <p>Press Releases</p>
+            </div>
+
+            <div>
+                <h3>Make Money with Us</h3>
+                <p>Sell on Amazon</p>
+                <p>Advertise Your Products</p>
+                <p>Become an Affiliate</p>
+            </div>
+
+            <div>
+                <h3>Let Us Help You</h3>
+                <p>Your Account</p>
+                <p>Returns Centre</p>
+                <p>Help</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 Amazon Clone • Ex-1
+        </div>
+
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

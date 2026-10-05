@@ -6,12 +6,25 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "start": "node server/index.js",
     "lint": "oxlint",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "server": "node server/index.js",
+    "4a": "node exercises/unit4/4a_hello_world_route.js",
+    "4b": "node exercises/unit4/4b_multi_route_website.js",
+    "4c": "node exercises/unit4/4c_hello_world_console.js",
+    "4d": "node exercises/unit4/4d_crud_express.js",
+    "4e": "node exercises/unit4/4e_express_mysql.js",
+    "db:init": "node database/initDb.js",
+    "verify": "node verify.js"
   },
   "dependencies": {
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.8",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.5",
+    "express": "^5.2.1",
+    "mysql2": "^3.24.5",
     "react": "^19.2.7",
     "react-dom": "^19.2.7"
   },
